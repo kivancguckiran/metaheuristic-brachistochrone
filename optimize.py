@@ -9,13 +9,13 @@ import harmony_search
 import simulated_annealing
 
 
-env = util.mediums(500, 500, 15)
+env = util.mediums(500, 500, 10)
 
-abc_optimizer = artificial_bee_colony.optimizer(1, 4500, 15, 50, 50, 20, 20, 0, env)
-de_optimizer = differential_evolution.optimizer(1, 1750, 15, 100, 0.5, 0.5, 0, env)
-ga_optimizer = genetic_algorithm.optimizer(1, 6000, 15, 100, 40, 20, 0.1, 0, env)
-hs_optimizer = harmony_search.optimizer(1, 5500, 15, 100, 0.99, 0.05, 0.005, 0, env)
-sa_optimizer = simulated_annealing.optimizer(1, 15, 1.0, 0.00001, 0.99625, 100, 0, env)
+abc_optimizer = artificial_bee_colony.optimizer(1, 4500, 10, 50, 50, 20, 20, 100, env)
+de_optimizer = differential_evolution.optimizer(1, 1750, 10, 100, 0.5, 0.5, 100, env)
+ga_optimizer = genetic_algorithm.optimizer(1, 6000, 10, 100, 40, 20, 0.1, 100, env)
+hs_optimizer = harmony_search.optimizer(1, 5500, 10, 100, 0.99, 0.05, 0.005, 100, env)
+sa_optimizer = simulated_annealing.optimizer(1, 10, 1.0, 0.00001, 0.99625, 100, 100, env)
 
 startTime = time.time() * 1000
 (sums, bests, losses, bestSolution, bestSolutionLoss) = abc_optimizer.optimize()

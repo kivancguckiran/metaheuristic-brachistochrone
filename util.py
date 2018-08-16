@@ -50,7 +50,7 @@ class mediums:
         plt.axis([0, self.mapX + 1, 0, self.mapY + 1])
 
         x = np.arange(0, self.mapX)
-        colors = gradient((255, 255, 255), (75, 75, 75), self.size + 1)
+        colors = gradient((255, 255, 0), (139, 69, 19), self.size + 1)
         for idx in np.arange(len(self.positions) + 1):
             if idx == 0:
                 plt.fill_between(x, 0, self.positions[idx], facecolor=colors[idx])
