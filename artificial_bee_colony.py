@@ -117,7 +117,7 @@ class optimizer:
 
             errors.append(self.env.calculateError(bestFoodSource))
             bests.append(bestFoodSource)
-            losses.append(loss)
+            losses.append(self.env.calculateFitness(bestFoodSource))
 
         sums = [sum(error) for error in errors]
         idx = np.asarray(sums).argsort()[0]

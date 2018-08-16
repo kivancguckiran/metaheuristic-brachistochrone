@@ -58,7 +58,7 @@ class optimizer:
 
             errors.append(self.env.calculateError(solution))
             bests.append(solution)
-            losses.append(loss)
+            losses.append(self.env.calculateFitness(solution))
 
 
         sums = [sum(error) for error in errors]

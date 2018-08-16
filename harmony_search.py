@@ -63,7 +63,7 @@ class optimizer:
 
             errors.append(self.env.calculateError(harmonyMemory[bestSolutionIdx]))
             bests.append(harmonyMemory[bestSolutionIdx])
-            losses.append(loss)
+            losses.append(self.env.calculateFitness(harmonyMemory[bestSolutionIdx]))
 
 
         sums = [sum(error) for error in errors]

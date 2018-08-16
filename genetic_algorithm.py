@@ -71,7 +71,7 @@ class optimizer:
 
             errors.append(self.env.calculateError(bestIndividual))
             bests.append(bestIndividual)
-            losses.append(loss)
+            losses.append(self.env.calculateFitness(bestIndividual))
 
         sums = [sum(error) for error in errors]
         idx = np.asarray(sums).argsort()[0]
